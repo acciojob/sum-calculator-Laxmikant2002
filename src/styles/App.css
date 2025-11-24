@@ -1,1 +1,38 @@
+.sum-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
 
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.sum-display {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.sum-display p {
+    margin: 0;
+    font-weight: bold;
+}
