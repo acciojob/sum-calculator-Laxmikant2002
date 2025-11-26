@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './../styles/App.css';
 
-const App = () => {
+const SumCalculator = () => {
   const [numbers, setNumbers] = useState([]);
   const [sum, setSum] = useState(0);
   const [inputValue, setInputValue] = useState("");
@@ -18,7 +18,8 @@ const App = () => {
   }, [numbers]);
 
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
+    const value = e.target.value;
+    setInputValue(value);
   };
 
   const handleKeyPress = (e) => {
@@ -32,20 +33,18 @@ const App = () => {
   };
   
   return (
-    <div className="sum-calculator">
-      <h1>Sum Calculator</h1>
+    <div id="main">
       <input
+        id="number-input"
         type="number"
         value={inputValue}
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}
-        placeholder="Enter a number and press Enter"
+        placeholder="Enter a number"
       />
-      <div className="sum-display">
-        <h2>Sum: {sum}</h2>
-      </div>
+      <p id="sum-result">{sum}</p>
     </div>
   );
 }
 
-export default App;
+export default SumCalculator;
